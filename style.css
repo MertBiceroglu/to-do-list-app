@@ -21,7 +21,7 @@ body{
     display: flex;
     width: 95%;
     background:#fff;
-    height: 600px;
+   /* height: 600px;*/
     border-radius: 5%;
     display: flex;
     flex-direction: column;
@@ -80,6 +80,7 @@ ol{
     font-weight: 900;
     color: white;
     letter-spacing: 2px;
+    margin-bottom: 50px;
 }
 .list-group-item{
     display: list-item;
@@ -102,6 +103,22 @@ ol{
 }
 .primary{
     background: #0093D5;
+}
+.headingWrapper{
+    display: flex;
+    justify-content: space-between;
+   /* border: black solid 1px;*/
+    width: 100%;
+}
+.alert{
+    width: 315px;
+    height: 55px;
+    /*background-color: grey;*/
+    margin-top: 15px;
+    font-size: 23px;
+    text-align: right;
+    margin-right: 10px;
+
 }
 
 
