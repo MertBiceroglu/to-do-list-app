@@ -1,17 +1,21 @@
-todoInput = document.querySelector('#todo');
-addButton = document.querySelectorAll('button')[0];
-todoList = document.querySelector('ol');
-alertWrapper = document.querySelector('.alert');
-baslik = document.querySelector('h1');
-
+const todoInput = document.querySelector('#todo');
+const addButton = document.querySelectorAll('button')[0];
+const todoList = document.querySelector('ol');
+const alertWrapper = document.querySelector('.alert');
+const baslik = document.querySelector('h1');
+const clearCompletedB = document.querySelectorAll('button')[1];
 eventListeners();
 function eventListeners() {
     addButton.addEventListener('click', addTodo);
+    window.addEventListener('DOMContentLoaded', loadAllTodosToUI);
+    todoList.addEventListener('click', completed);
+    clearCompletedB.addEventListener('click', clearCompleted);
 }
 
 function addTodo() {
     let todo = todoInput.value.trim();
     addTodoToUI(todo);
+    addTodoToStorage(todo);
 }
 function addTodoToUI(newTodo) {
     listItem = document.createElement('li');
@@ -73,6 +77,53 @@ function checkIfEmpty(newTodo) {
         return false;
     }
 }
-function addTodoToStorage() {
+function addTodoToStorage(newTodo) {
+    let todos = getTodosFromStorage();
+    todos.push(newTodo);
 
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+function getTodosFromStorage() {
+    let todos;
+    if (localStorage.getItem("todos") === null) {
+        todos = [];
+    }
+    else {
+        todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    return todos;
+}
+function loadAllTodosToUI() {
+    let todos = getTodosFromStorage();
+
+    todos.forEach(function (todo) {
+        addTodoToUI(todo);
+    });
+}
+function completed(e) {
+    if (e.target.className === 'list-group-item') {
+        e.target.style.textDecoration = 'line-through';
+        e.target.style.fontStyle = 'italic';
+        e.target.className = 'list-group-item completed';
+    }
+    else {
+        //do nothing
+    }
+}
+function clearCompleted() {
+    let todos = document.querySelectorAll('li');
+    todos.forEach(function (e) {
+        if (e.className === 'list-group-item completed') {
+            e.remove();
+        }
+    })
+    saveToLocalStorage();
+}
+function saveToLocalStorage() {
+    const todos = document.querySelectorAll('li');
+    newTodos = [];
+    for (i = 0; i < todos.length; i++) {
+        newTodos.push(todos[i].textContent);
+    }
+    localStorage.setItem("todos", JSON.stringify(newTodos));
 }
