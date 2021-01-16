@@ -1,0 +1,126 @@
+body{
+    background:ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Yusei Magic', sans-serif;
+
+}
+.container{
+    width: 800px;
+    height:800px;
+    background:#49B749;
+    margin-top: 100px;
+    border: 3px solid;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    width: 95%;
+    background:#fff;
+    height: 600px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+h1{
+    font-size: 2.5em;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-weight: 700;
+}
+p{
+    margin-top: -20px;
+    margin-left: 40px;
+    font-style: italic;
+    color: #666;
+    font-size: 20px;
+}
+#todo{
+    margin-left: 40px;
+    width: 200px;
+    height:30px;
+    font-size: 20px;
+}
+.pretty-button{
+    margin-left: 20px;
+    padding: 5px 25px;
+    border-radius: 10px;
+    background-color: #0093D5;
+    border: none;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+}
+.pretty-button:active{
+    border-style: none;
+}
+.pretty-button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+ol{
+    margin-left: 100px;
+    margin-top: 45px;
+    font-size: 30px;
+    height: 250px;
+}
+.button{
+    width: 190px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 20px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 2px;
+}
+.list-group-item{
+    display: list-item;
+    width: 500px;
+    padding-left: 7px;
+    cursor: pointer;
+}
+.list-group-item:nth-child(2n){
+    background: #ddd;
+}
+.button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+.success{
+    background: green;
+}
+.danger{
+    background:darkred;
+}
+.primary{
+    background: #0093D5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
