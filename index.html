@@ -8,39 +8,46 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
     <div class="container">
         <div class="wrapper">
             <div class="headingWrapper">
-                <h1>My Todo-List (0/6)</h1>
+                <h1>My Todo-List (0/14)</h1>
                 <div class="alert">
                     <!-- <span>Todo Ekleme Başarılı!</span> -->
                 </div>
             </div>
             <p>Double-click an item to mark it complete.</p>
-            <div style="display: flex;">
-                <input type="text" name="todo" id="todo">
-                <button class="pretty-button">Add</button>
+            <div style="display: flex; width:100%; justify-content:space-between;">
+                <div>
+                    <input type="text" name="todo" id="todo">
+                    <button class="pretty-button">Add</button>
+                </div>
+                <div style="margin-right: 50px;">
+                    <label for="autosave" style="font-size: 30px">Autosave</label>
+                    <input type="checkbox" name="autosave" id="autosave" class="double" style="width: ;">
+                </div>
             </div>
 
             <ol class="list-group">
-                <!-- <li class="list-group-item">My</li> -->
-                <!-- <li class="list-group-item">To-do</li>
-                <li class="list-group-item">list</li>
-                <li class="list-group-item">offf</li>
-                <li class="list-group-item">offf</li>
-                <li class="list-group-item">offf</li> -->
+
             </ol>
-            <div style="display:flex; justify-content: space-evenly; width: 100%;">
-                <button class="button primary">Clear Completed</button>
-                <button class="button danger">Empty List</button>
-                <button class="button success">Save List</button>
+            <div class="buttonWrapper" style="display:flex; justify-content: space-evenly; width: 100%;">
+                <button class="button clearCompleted">Clear Completed</button>
+                <button class="button emptyList">Empty List</button>
+                <button class="button saveList">Save List</button>
             </div>
+
         </div>
+        <div class="homeButton"></div>
     </div>
     <script src='app.js'></script>
+
 
 </body>
 

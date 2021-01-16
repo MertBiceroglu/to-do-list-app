@@ -1,3 +1,4 @@
+
 body{
     background:ghostwhite;
     display: flex;
@@ -6,27 +7,51 @@ body{
     font-family: 'Yusei Magic', sans-serif;
 
 }
+.double {
+    zoom: 1.75;
+    transform: scale(1.75);
+    -ms-transform: scale(1.75);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    margin-bottom: 5px;
+  }
 .container{
     width: 800px;
-    height:800px;
-    background:#49B749;
-    margin-top: 100px;
+    height:1300px;
+    background:black;
+    margin-top: 35px;
     border: 3px solid;
     border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.homeButton{
+    width:100px;
+    height:100px;
+    background-color: #ddd;
+    border-radius: 100%;
+    margin-top: 50px;
+    
 }
 .wrapper{
     display: flex;
     width: 95%;
-    background:#fff;
-   /* height: 600px;*/
+    background:#eff7e1;
+    height: 1000px;
     border-radius: 5%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top:50px;
 }
 h1{
     font-size: 2.5em;
@@ -43,20 +68,23 @@ p{
 }
 #todo{
     margin-left: 40px;
-    width: 200px;
+    width: 300px;
     height:30px;
     font-size: 20px;
+
 }
 .pretty-button{
     margin-left: 20px;
-    padding: 5px 25px;
+    padding: 7px 25px;
     border-radius: 10px;
-    background-color: #0093D5;
+    background-color: black;
     border: none;
     color: #fff;
     text-align: center;
     display: inline-block;
     font-size: 20px;
+    width: 100px;
+
 }
 .pretty-button:active{
     border-style: none;
@@ -71,17 +99,7 @@ ol{
     font-size: 30px;
     height: 250px;
 }
-.button{
-    width: 190px;
-    height: 40px;
-    font-size: 17px;
-    border-radius: 20px;
-    font-family: 'Yusei Magic', sans-serif;
-    font-weight: 900;
-    color: white;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
-}
+
 .list-group-item{
     display: list-item;
     width: 500px;
@@ -89,21 +107,56 @@ ol{
     cursor: pointer;
     
 }
+.deleteIcon{
+    float: right;
+    margin-right: 25px;
+    color: black;
+    cursor: pointer;
+    font-style: normal !important;
+    font-weight: 900;
+    margin-top: 5px;
+}
+.list-group{
+    height: 1000px;
+}
+.deleteIcon:hover{
+    opacity: 0.5;
+}
 .list-group-item:nth-child(2n){
     background: #ddd;
+}
+.list-group-item:hover{
+    background-color: #ddd;
+}
+.list-group-item:nth-child(2n):hover{
+    background: #bbb;
+}
+.button{
+    width: 190px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 20px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    padding:20px,25px;
 }
 .button:hover {
     cursor: pointer;
     opacity: 0.75;
 }
-.success{
-    background: green;
+.saveList{
+    background:#f8dc81;
+    color: black !important;
 }
-.danger{
-    background:darkred;
+.emptyList{
+    background:#214151;
 }
-.primary{
-    background: #0093D5;
+.clearCompleted{
+    background: #a2d0c1;
+     color: black !important;
 }
 .headingWrapper{
     display: flex;
@@ -121,24 +174,3 @@ ol{
     margin-right: 10px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
