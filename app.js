@@ -32,6 +32,7 @@ function addTodo() {
         if (!checkIfEmpty(todo))
             addTodoToStorage(todo);
     }
+    todoInput.value = null;
 }
 function addTodoToUI(newTodo, checker) {
     listItem = document.createElement('li');
@@ -146,7 +147,7 @@ function clearCompleted() {
     todos.forEach(function (e) {
         if (e.className === 'list-group-item completed') {
             e.remove();
-            todoNumber--;
+            // todoNumber--;
             updateHeader();
         }
     })
